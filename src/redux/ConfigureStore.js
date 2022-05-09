@@ -4,7 +4,7 @@ import { applyMiddleware, configureStore } from 'redux';
 import logger from 'redux-logger';
 
 const store = configureStore(
-  reducer,
+//   reducer,
   applyMiddleware(logger),
 );
 
