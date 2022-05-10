@@ -4,7 +4,7 @@ import RocketItem from './Rocket';
 import { getRockets } from '../redux/Rockets/reduxrocket';
 
 const RocketsList = () => {
-  const rockets = useSelector((state) => state);
+  const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getRockets());

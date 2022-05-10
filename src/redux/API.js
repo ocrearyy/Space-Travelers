@@ -1,5 +1,3 @@
-import { render } from "@testing-library/react";
-
 const rocketURL = 'https://api.spacexdata.com/v3/rockets';
 const missionURL = 'https://api.spacexdata.com/v3/missions';
 
@@ -16,14 +14,14 @@ const getData = async () => {
 };
 
 const fetchMissions = async () => {
-    const response = await fetch(missionURL);
-    const missions = await response.json();
+  const response = await fetch(missionURL);
+  const missions = await response.json();
 
-    return missions.map((element) => ({
-      mission_id: element.mission_id,
-      mission_name: element.mission_name,
-      description: element.description,
-    }))
+  return missions.map((element) => ({
+    mission_id: element.mission_id,
+    mission_name: element.mission_name,
+    description: element.description,
+  }));
 };
 
 export { fetchMissions, getData };
