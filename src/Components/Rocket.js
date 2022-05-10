@@ -1,7 +1,20 @@
-const Rocket = () => (
-  <div>
-    <h1>Im a rocket</h1>
-  </div>
-);
+import React from 'react';
 
-export default Rocket;
+const RocketItem = (props) => {
+  const { rocket } = props;
+
+  return (
+    <div>
+      <div>
+        <img src={rocket.flickr_images[0]} />
+      </div>
+      <div>
+        <h1>{rocket.rocket_name}</h1>
+        <p>{rocket.description}</p>
+      </div>
+
+    </div>
+  );
+};
+
+export default RocketItem;
