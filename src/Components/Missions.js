@@ -5,20 +5,19 @@ import MissionItem from './Misssion';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const missions = useSelector((state) => state.missions);
+  const missions = useSelector((state) => state.mission);
   useEffect(() => {
     dispatch(getMissions());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div>
       <ul>
         {
-        missions.map((mission) => (
-          // mission.mission_id.splice.join(',').find((element) => element === Number),
+        missions.map((element) => (
           <MissionItem
-            key={mission.mission_id}
-            mission={mission}
+            key={element.mission_id}
+            mission={element}
           />
         ))
       }

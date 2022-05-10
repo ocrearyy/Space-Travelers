@@ -6,7 +6,7 @@ const InitialState = [];
 export const missionReducer = (state = InitialState, action = {}) => {
   switch (action.type) {
     case ADDMISSION:
-      return [...state, action.mission];
+      return [...action.mission];
     default: return state;
   }
 };

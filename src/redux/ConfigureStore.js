@@ -8,7 +8,7 @@ import { missionReducer } from './missions/reduxmission';
 // Logger with default options
 const rootReducer = combineReducers({
   rockets: rocketReducer,
-  missions: missionReducer,
+  mission: missionReducer,
 });
 const store = configureStore({ reducer: rootReducer },
   composeWithDevTools(
