@@ -9,7 +9,6 @@ const RocketsList = () => {
   useEffect(() => {
     dispatch(getRockets());
   }, [dispatch]);
- 
   return (
     <div>
       <ul>

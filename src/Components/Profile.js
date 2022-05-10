@@ -1,7 +1,19 @@
-const Profile = () => (
+import { useSelector } from 'react-redux';
+
+
+const Profile = () => {
+  const rockets = useSelector((state) => state.filter((rocket) => rocket.reserved));
+  return (
   <div>
-    <h1>Profile guy</h1>
+    <ul>
+      {
+        rockets.map((rocket) => (
+          <p>{rocket.rocket_name}</p>
+        ))
+      }
+    </ul>
   </div>
-);
+  )
+};
 
 export default Profile;

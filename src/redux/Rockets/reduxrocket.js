@@ -4,6 +4,7 @@ const LOADINGROCKET = 'rockets/LOADINGROCKETS';
 const ADDROCKET = 'rockets/ADDROCKET';
 const RESERVESTATE = 'rockets/RESERVE';
 const RESERVEBUTTON = 'rockets/BUTTTON';
+const CANCELBUTTON = 'rockets/CANCEL';
 // const TOGGLE ='./rockets/TOGGLE'
 
 const intialState = [];
@@ -20,6 +21,13 @@ export const rocketReducer = (state = intialState, action = {}) => {
         ...state.map((state) => {
           if (state.id !== action.id) { return state; }
           return { ...state, reserved: true };
+        }),
+      ];
+    case CANCELBUTTON:
+      return [
+        ...state.map((state) => {
+          if (state.id !== action.id) { return state; }
+          return { ...state, reserved: false };
         }),
       ];
     default: return state;
@@ -60,5 +68,9 @@ export function reserveButton(id) {
   };
 }
 
-
-
+export function cancelButton(id) {
+  return {
+    type: CANCELBUTTON,
+    id,
+  };
+}
