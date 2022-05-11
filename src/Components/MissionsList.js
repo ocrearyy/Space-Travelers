@@ -4,11 +4,11 @@ import { getMissions } from '../redux/missions/reduxmission';
 import MissionItem from './Misssion';
 
 const Missions = () => {
+  const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-  const missions = useSelector((state) => state.mission);
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

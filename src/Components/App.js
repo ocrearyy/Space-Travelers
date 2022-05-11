@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Missions from './Missions';
+import Missions from './MissionsList';
 import Profile from './Profile';
 
 import NavBar from './NavigationBar';
