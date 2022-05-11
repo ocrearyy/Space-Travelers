@@ -54,7 +54,6 @@ $border-grey: #343a40;
 $table-border: #dee2e6;
 
 table {
-  margin: 4vw;
   border-collapse: collapse;
   text-align: left;
 
@@ -69,11 +68,11 @@ table {
     padding-right: 20px;
   }
 
-  table tr:nth-child(odd) {
-    background: lightgray;
+   tr: nth-child(odd) {
+    background: white;
   }
   
-  table tr:nth-child(even) {
+  tr: nth-child(even) {
     background-color: white;
   }
 }

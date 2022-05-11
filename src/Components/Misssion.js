@@ -8,8 +8,18 @@ const MissionItem = (props) => {
   const dispatch = useDispatch();
 
   return (
-    <table>
-      <tr>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th label="Empty" />
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
         <td className="mission-title">{mission.mission_name}</td>
         <td className="mission-paragraph">{mission.description}</td>
         <td className="member-mission">
@@ -20,8 +30,10 @@ const MissionItem = (props) => {
         <td>
           { mission.reserved ? <button type="button" className="join-mission" onClick={() => { dispatch(cancelMission(mission.mission_id)); }}>Leave Mission</button> : <button type="button" className="join-mission" onClick={() => { dispatch(reserveMission(mission.mission_id)); }}>Join Mission</button>}
         </td>
-      </tr>
-    </table>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
