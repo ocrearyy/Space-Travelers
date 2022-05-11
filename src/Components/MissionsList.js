@@ -12,8 +12,17 @@ const Missions = () => {
 
   return (
     <div>
-      <ul>
-        {
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th label="Empty" />
+          </tr>
+        </thead>
+        <tbody>
+          {
           missions.map((mission) => (
             <MissionItem
               key={mission.mission_id}
@@ -21,7 +30,8 @@ const Missions = () => {
             />
           ))
       }
-      </ul>
+        </tbody>
+      </table>
     </div>
   );
 };
