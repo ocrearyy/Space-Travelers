@@ -1,20 +1,35 @@
 import { useSelector } from 'react-redux';
-
+import PropTypes from 'prop-types';
 
 const Profile = () => {
-  const rockets = useSelector((state) => state.filter((rocket) => rocket.reserved));
+  const rockets = useSelector((state) => state.rockets.filter((rocket) => rocket.reserved));
+
   return (
-  <div>
-    <ul>
-      {
-        rockets.map((rocket) => (
-          <p>{rocket.rocket_name}</p>
-        ))
-      }
-    </ul>
-  </div>
-  )
+    <div className="rendered">
+      <div>
+        <h3>My Missions</h3>
+      </div>
+      <div>
+        <h3>My Rockets</h3>
+        <ul id="rocketRender">
+          {
+          rockets.map((rocket) => (
+            <p id="renderedList" key={rocket.id}>
+              {rocket.rocket_name}
+            </p>
+          ))
+        }
+        </ul>
+      </div>
+    </div>
+  );
 };
 
+Profile.propTypes = {
+  rocket: PropTypes.shape({
+    rocket_name: PropTypes.string.isRequired,
+  }).isRequired,
+
+};
 
 export default Profile;
