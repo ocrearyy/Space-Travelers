@@ -30,6 +30,7 @@ RocketItem.propTypes = {
     description: PropTypes.string.isRequired,
     rocket_name: PropTypes.string.isRequired,
     flickr_images: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
 
 };

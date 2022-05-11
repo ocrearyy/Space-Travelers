@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-
+import PropTypes from 'prop-types';
 
 const Profile = () => {
   const rockets = useSelector((state) => state.rockets.filter((rocket) => rocket.reserved));
@@ -14,8 +14,8 @@ const Profile = () => {
         <ul id="rocketRender">
           {
           rockets.map((rocket) => (
-            <p id="renderedList">
-             {rocket.rocket_name}
+            <p id="renderedList" key={rocket.id}>
+              {rocket.rocket_name}
             </p>
           ))
         }
