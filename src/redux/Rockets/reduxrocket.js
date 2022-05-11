@@ -29,9 +29,11 @@ export const rocketReducer = (state = intialState, action = {}) => {
           if (state.id !== action.id) { return state; }
           return { ...state, reserved: false };
         }),
+
       ];
     default: return state;
   }
+
 };
 
 export function loadingRockets() {
@@ -61,6 +63,7 @@ export function newState(id) {
   };
 }
 
+// eslint-disable-next-line camelcase
 export function reserveButton(id) {
   return {
     type: RESERVEBUTTON,
@@ -68,9 +71,11 @@ export function reserveButton(id) {
   };
 }
 
+// eslint-disable-next-line camelcase
 export function cancelButton(id) {
   return {
     type: CANCELBUTTON,
     id,
   };
 }
+

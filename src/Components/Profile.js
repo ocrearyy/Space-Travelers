@@ -3,11 +3,23 @@ import PropTypes from 'prop-types';
 
 const Profile = () => {
   const rockets = useSelector((state) => state.rockets.filter((rocket) => rocket.reserved));
+  const missions = useSelector((state) => state.mission.filter((mission) => mission.reserved));
+  
 
   return (
     <div className="rendered">
       <div>
         <h3>My Missions</h3>
+        <ul id="rocketRender">
+          {
+          missions.map((mission) => (
+            <p id="renderedList" key={mission.mission_id}>
+              {mission.mission_name}
+            </p>
+          ))
+        }
+        </ul>
+
       </div>
       <div>
         <h3>My Rockets</h3>

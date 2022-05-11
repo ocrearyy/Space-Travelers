@@ -4,7 +4,7 @@ import { getMissions } from '../redux/missions/reduxmission';
 import MissionItem from './Misssion';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missions);
+  const missions = useSelector((state) => state.mission);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMissions());
@@ -14,12 +14,12 @@ const Missions = () => {
     <div>
       <ul>
         {
-          {typeOf (missions) === 'string' ? <p>{missions}</p> : missions.map((mission) => (
-          <MissionItem
-            key={mission_id}
-            mission={mission}
-          />
-        ))
+          missions.map((mission) => (
+            <MissionItem
+              key={mission.mission_id}
+              mission={mission}
+            />
+          ))
       }
       </ul>
     </div>
