@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0  50px 10px 50px;
+    border-bottom: 2px solid lightgray;
+
+   #navLogo {
+       width: 8%;
+       height: 80%;
+       align-self: center;
+   }
+    
+   .logoDiv {
+       display: flex; 
+       gap: 15px;
+   }
+
+   #headerText {
+       font-size: 20px;
+       font-weight: 600;
+   }
+    
+    ul{
+        text-decoration: none;
+        list-style: none;  
+        align-self: center;
+        margin: 0;
+        padding: 0;
+
+      
+    }
+
+    #navList {
+        display: flex; 
+        gap: 10px;
+    }
+
+    a {
+        text-decoration: none;
+
+       
+    }
+    #anchorc {
+        border-left: 2px solid black;
+        padding-left: 8px;
+    }
+
+}
