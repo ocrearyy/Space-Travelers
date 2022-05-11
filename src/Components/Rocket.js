@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { cancelButton, reserveButton } from '../redux/Rockets/reduxrocket';
 
 const RocketItem = (props) => {
@@ -8,7 +9,7 @@ const RocketItem = (props) => {
   return (
     <div className="rocketContainer">
       <div id="image">
-        <img className="rocImage" src={rocket.flickr_images[0]} alt="image" />
+        <img className="rocImage" src={rocket.flickr_images[0]} alt="images" />
       </div>
       <div id="about">
         <h1 className="rocketName">{rocket.rocket_name}</h1>
@@ -21,6 +22,16 @@ const RocketItem = (props) => {
 
     </div>
   );
+};
+
+RocketItem.propTypes = {
+  rocket: PropTypes.shape({
+    reserved: PropTypes.bool.isRequired,
+    description: PropTypes.string.isRequired,
+    rocket_name: PropTypes.string.isRequired,
+    flickr_images: PropTypes.string.isRequired,
+  }).isRequired,
+
 };
 
 export default RocketItem;
