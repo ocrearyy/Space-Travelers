@@ -1,4 +1,4 @@
-import { applyMiddleware, combineReducers} from 'redux';
+import { applyMiddleware, combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
