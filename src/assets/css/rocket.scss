@@ -1,0 +1,51 @@
+.rocketContainer {
+  display: flex;
+  gap: 30px;
+  padding: 0  50px 0 15px;
+
+  #image {
+    align-self: center;
+    padding-top: 20px;
+
+    .rocImage {
+      width: 300px;
+    }
+  }
+
+  #about {
+    .rocketName {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .cancel {
+      width: 27%;
+      background-color: #1275de;
+      border-style: none;
+      height: 17%;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .reserve {
+      width: 29%;
+      background-color: transparent;
+      border: 2px solid lightgrey;
+      height: 18%;
+      border-radius: 5px;
+      color: lightgrey;
+      font-size: 17px;
+    }
+
+    span {
+      background-color: rgb(85, 174, 204);
+      color: white;
+      font-size: 10px;
+      padding: 3px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+  }
+}

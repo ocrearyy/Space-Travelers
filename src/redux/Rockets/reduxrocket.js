@@ -11,7 +11,7 @@ const intialState = [];
 export const rocketReducer = (state = intialState, action = {}) => {
   switch (action.type) {
     case LOADINGROCKET:
-      return 'Take a chill pill, rockets loading';
+      return 'Want to go to space 🚀? Your dream is about to come true 🔮. Close your eyes 😊and open at the count of 2. One.. Two.';
     case ADDROCKET:
       return [
         ...action.rockets,
@@ -51,7 +51,7 @@ export const getRockets = () => async (dispatch) => {
   setTimeout(async () => {
     const response = await getData();
     dispatch(addrockets(response));
-  }, 3000);
+  }, 5000);
 };
 
 export function newState(id) {
