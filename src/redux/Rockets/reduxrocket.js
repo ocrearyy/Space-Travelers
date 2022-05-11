@@ -33,7 +33,6 @@ export const rocketReducer = (state = intialState, action = {}) => {
       ];
     default: return state;
   }
-
 };
 
 export function loadingRockets() {
@@ -78,4 +77,3 @@ export function cancelButton(id) {
     id,
   };
 }
-

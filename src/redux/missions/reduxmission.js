@@ -1,7 +1,7 @@
 import { fetchMissions } from '../API';
 
 const ADDMISSION = 'missions/ADDMISSION';
-const RESERVE= 'missions/Button';
+const RESERVE = 'missions/Button';
 const CANCEL = 'missions/CANCEL';
 
 const initialState = [];
@@ -40,8 +40,6 @@ export const getMissions = () => async (dispatch) => {
   const response = await fetchMissions();
   dispatch(addmissions(response));
 };
-
-
 
 // eslint-disable-next-line camelcase
 export function reserveMission(mission_id) {

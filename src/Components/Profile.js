@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const Profile = () => {
   const rockets = useSelector((state) => state.rockets.filter((rocket) => rocket.reserved));
   const missions = useSelector((state) => state.mission.filter((mission) => mission.reserved));
-  
 
   return (
     <div className="rendered">
