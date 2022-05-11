@@ -11,7 +11,7 @@ const MissionItem = (props) => {
         <button className="member" type="button" label="Member">NOT A MEMBER</button>
       </td>
       <td>
-       { mission.reserved ? <button type="button" className="join-mission" onClick={() => { dispatch(cancelButton(mission.id)); }}>Leave Mission</button> : <button type="button" className="join-mission" onClick={() => { dispatch(reserveButton(mission.id)); }}>Join Mission</button>}
+        { mission.reserved ? <button type="button" className="join-mission" onClick={() => { dispatch(cancelButton(mission.id)); }}>Leave Mission</button> : <button type="button" className="join-mission" onClick={() => { dispatch(reserveButton(mission.id)); }}>Join Mission</button>}
       </td>
     </tr>
   );
