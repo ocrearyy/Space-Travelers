@@ -54,7 +54,6 @@ $border-grey: #343a40;
 $table-border: #dee2e6;
 
 table {
-  margin: 4vw;
   border-collapse: collapse;
   text-align: left;
 
@@ -65,13 +64,15 @@ table {
 
   td {
     border: 1px solid $table-border;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  tbody tr:nth-child(odd) {
-    background: #f2f2f2;
+   tr: nth-child(odd) {
+    background: white;
   }
   
-  tbody tr:nth-child(even) {
+  tr: nth-child(even) {
     background-color: white;
   }
 }
@@ -131,5 +132,10 @@ table {
   width: max-content;
   padding: 0.7vw 0.5vw;
   cursor: pointer;
+}
+
+th {
+  padding: 10px;
+  border: 1px solid #333;
 }
 
