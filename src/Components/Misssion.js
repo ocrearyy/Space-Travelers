@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { cancelMission, reserveMission } from '../redux/missions/reduxmission';
 
+
 const MissionItem = (props) => {
   const { mission } = props;
   const dispatch = useDispatch();
@@ -27,7 +28,9 @@ MissionItem.propTypes = {
   mission: PropTypes.shape({
     mission_name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+
     reserved: PropTypes.bool.isRequired,
+
   }).isRequired,
 
 };
