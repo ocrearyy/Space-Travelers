@@ -69,11 +69,11 @@ table {
     padding-right: 20px;
   }
 
-  tbody tr:nth-child(odd) {
-    background: #f2f2f2;
+  table tr:nth-child(odd) {
+    background: lightgray;
   }
   
-  tbody tr:nth-child(even) {
+  table tr:nth-child(even) {
     background-color: white;
   }
 }
