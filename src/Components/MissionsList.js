@@ -14,7 +14,7 @@ const Missions = () => {
     <div>
       <ul>
         {
-        missions.map((element) => (
+          {typeOf (missions) === 'string' ? <p>{missions}</p> : missions.map((mission) => (
           <MissionItem
             key={element.mission_id}
             mission={element}
