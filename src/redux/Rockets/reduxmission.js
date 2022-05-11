@@ -1,5 +1,8 @@
+import { func } from "prop-types";
+import { fetchMissions } from "../API";
+
 const LOADINGMISSION = 'missions/LOADINGMISSIONS';
-const ADDROCKET = 'missions/ADDMISSION';
+const ADDMISSION = 'missions/ADDMISSION';
 const RESERVESTATE = 'missions/RESERVE';
 const RESERVEBUTTON = 'missions/Button';
 const CANCELBUTTON = 'missions/CANCEL';
@@ -31,4 +34,38 @@ export const missionReducer = (state = initialState, action = {}) => {
     }
 };
 
-export 
+export function addmissions(missions) {
+  return {
+    type: ADDMISSION,
+    missions,
+  };
+}
+
+export const getMissions = () => async (dispatch) => {
+  dispatch(loadingMissions());
+  setTimeout(async () => {
+    const response = await fetchMissions();
+    dispatch(addmissions(response));
+  }, 5000);
+};
+
+export function newState(id) {
+  return {
+    type: RESERVESTATE,
+    id,
+  };
+}
+
+export function reserveButton(id) {
+  return {
+    type: RESERVEBUTTON,
+    id,
+  };
+}
+
+export function cancelButton(id) {
+    return {
+      type: CANCELBUTTON,
+      id,
+    };
+  }

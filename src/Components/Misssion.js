@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const MissionItem = (props) => {
   const { mission } = props;
@@ -15,6 +16,14 @@ const MissionItem = (props) => {
       </td>
     </tr>
   );
+};
+
+MissionItem.propTypes = {
+  mission: PropTypes.shape({
+    mission_name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+
 };
 
 export default MissionItem;
