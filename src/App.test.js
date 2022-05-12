@@ -15,22 +15,22 @@ const appRender = () => render(
 );
 
 describe('App', () => {
-  it('renders without crashing', () => {
+  it('displays withput error', () => {
     appRender();
   });
-  it('renders the rocket list', () => {
+  it('displays the rockets', () => {
     appRender();
     expect(screen.getByText('Rockets')).toBeInTheDocument();
   });
-  it('renders the mission list', () => {
+  it('displays the missions', () => {
     appRender();
     expect(screen.getByText('Missions')).toBeInTheDocument();
   });
-  it('renders the profile', () => {
+  it('display the profile section', () => {
     appRender();
     expect(screen.getByText('My Profile')).toBeInTheDocument();
   });
-  it('Simulates a click on the Missions page', () => {
+  it('event listens for a click on the page', () => {
     appRender();
     const mission = screen.getByText('Missions');
     fireEvent.click(mission);
