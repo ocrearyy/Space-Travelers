@@ -52,7 +52,7 @@ export const getRockets = () => async (dispatch) => {
   setTimeout(async () => {
     const response = await getData();
     dispatch(addrockets(response));
-  }, 5000);
+  }, 3500);
 };
 
 export function newState(id) {

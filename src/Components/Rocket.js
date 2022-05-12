@@ -13,7 +13,7 @@ const RocketItem = (props) => {
       </div>
       <div id="about">
         <h1 className="rocketName">{rocket.rocket_name}</h1>
-        <p>
+        <p id="para">
           {rocket.reserved ? <span>Reserved</span> : null}
           {rocket.description}
         </p>

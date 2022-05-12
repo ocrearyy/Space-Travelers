@@ -13,12 +13,12 @@ const MissionItem = (props) => {
       <td className="mission-title">{mission.mission_name}</td>
       <td className="mission-paragraph">{mission.description}</td>
       <td className="member-mission">
-        <p className="member">
+        <p>
           {mission.reserved ? <span className="active-member">Active Member</span> : <span className="member">Not a Member</span>}
         </p>
       </td>
       <td>
-        { mission.reserved ? <button type="button" className="join-mission" onClick={() => { dispatch(cancelMission(mission.mission_id)); }}>Leave Mission</button> : <button type="button" className="join-mission" onClick={() => { dispatch(reserveMission(mission.mission_id)); }}>Join Mission</button>}
+        { mission.reserved ? <button type="button" className="leave-mission" onClick={() => { dispatch(cancelMission(mission.mission_id)); }}>Leave Mission</button> : <button type="button" className="join-mission" onClick={() => { dispatch(reserveMission(mission.mission_id)); }}>Join Mission</button>}
       </td>
     </tr>
   );

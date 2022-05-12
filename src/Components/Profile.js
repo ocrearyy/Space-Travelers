@@ -8,7 +8,7 @@ const Profile = () => {
 
   return (
     <div className="rendered">
-      <div>
+      <div id="wrapitup">
         <h3>My Missions</h3>
         <ul id="rocketRender">
           {
@@ -20,7 +20,7 @@ const Profile = () => {
         }
         </ul>
       </div>
-      <div>
+      <div id="wrapitup">
         <h3>My Rockets</h3>
         <ul id="rocketRender">
           {
