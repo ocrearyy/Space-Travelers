@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { cancelMission, reserveMission } from '../redux/missions/reduxmission';
 
-
 const MissionItem = (props) => {
   const { mission } = props;
   const dispatch = useDispatch();
