@@ -11,9 +11,6 @@ To get a local copy up and running follow this simple step:
 
 - Run `npm start`
 
-## Live Demo
-
-
 
 # Screenshot
 ![The real rocket](https://user-images.githubusercontent.com/66526480/168384255-dbbb9fbe-d254-4adc-a297-0a801f4a9034.PNG)
