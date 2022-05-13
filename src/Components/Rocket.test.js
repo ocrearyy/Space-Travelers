@@ -1,5 +1,5 @@
 import {
-  loadingRockets, addrockets, reserveButton, rocketReducer,
+  addrockets, reserveButton, rocketReducer,
 } from '../redux/Rockets/reduxrocket';
 
 describe('Get Rockets', () => {
