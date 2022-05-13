@@ -10,7 +10,7 @@ const RocketsList = () => {
     dispatch(getRockets());
   }, [dispatch]);
   return (
-    <div>
+    <div className="rocketWrap">
       <ul>
         {typeof (rockets) === 'string' ? <p>{rockets}</p> : rockets.map((rocket) => (
           <RocketItem

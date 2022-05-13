@@ -1,141 +1,178 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-.Nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0  50px 10px 50px;
-  border-bottom: 2px solid lightgray;
-
-  #navLogo {
-    width: 8%;
-    height: 80%;
-    align-self: center;
-  }
-
-  .logoDiv {
+  .Nav {
     display: flex;
-    gap: 15px;
-  }
+    justify-content: space-between;
+    padding: 0  50px 10px 50px;
+    border-bottom: 2px solid lightgray;
 
-  #headerText {
-    font-size: 20px;
-    font-weight: 600;
-  }
+    #navLogo {
+      width: 8%;
+      height: 80%;
+      align-self: center;
+    }
 
-  ul {
-    text-decoration: none;
-    list-style: none;
-    align-self: center;
-    margin: 0;
-    padding: 0;
-  }
+    .logoDiv {
+      display: flex;
+      gap: 15px;
+    }
 
-  #navList {
-    display: flex;
-    gap: 10px;
-  }
+    #headerText {
+      font-size: 20px;
+      font-weight: 600;
+    }
 
-  a {
-    text-decoration: none;
+    ul {
+      text-decoration: none;
+      list-style: none;
+      align-self: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navList {
+      display: flex;
+      gap: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(37, 153, 192);
+    }
   }
 
   #anchorc {
     border-left: 2px solid black;
     padding-left: 8px;
   }
-}
 
-$blue-color: #2ba8be;
-$red-color: #dc3645;
-$grey-color: #6d757d;
-$border-grey: #343a40;
-$table-border: #dee2e6;
+  #anchorb:focus {
+    text-decoration-line: underline;
+    color: rgb(10, 194, 255);
+  }
 
-table {
-  border-collapse: collapse;
-  text-align: left;
+  #anchora:focus {
+    text-decoration-line: underline;
+    color: rgb(10, 194, 255);
+  }
 
-  th {
+  #anchorc:focus {
+    text-decoration-line: underline;
+    color: rgb(10, 194, 255);
+  }
+
+  $blue-color: #2ba8be;
+  $red-color: #dc3645;
+  $grey-color: #6d757d;
+  $border-grey: #343a40;
+  $table-border: #dee2e6;
+
+  table {
+    border-collapse: collapse;
+    text-align: left;
+
+    th {
+      padding: 10px;
+      border: 1px solid #333;
+    }
+
+    td {
+      border: 1px solid $table-border;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: lightgrey;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: white;
+    }
+  }
+
+  .join-mission {
+    color: black;
+    width: 100px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .leave-mission {
+    color: red;
+    width: 100px;
+    border: 1px solid red;
+    padding: 7px;
+    border-radius: 5px;
+  }
+
+  .member-mission {
+    padding: 0 0.5vw;
+  }
+
+  .mission-title {
+    vertical-align: top;
     padding: 0.5vw;
-    border: 1px solid $table-border;
+    font-weight: bold;
   }
 
-  td {
-    border: 1px solid $table-border;
-    padding-left: 20px;
-    padding-right: 20px;
+  .mission-paragraph {
+    font-size: 0.6em;
+    line-height: 1.5em;
+    padding: 0.5vw 0.5vw 3vw;
   }
 
-   tr: nth-child(odd) {
-    background: white;
+  .member {
+    appearance: none;
+    background: none;
+    border: none;
+    background-color: $grey-color;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    width: max-content;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0.15vw 0.5vw;
   }
-  
-  tr: nth-child(even) {
-    background-color: white;
+
+  .active-member {
+    appearance: none;
+    background: none;
+    border: none;
+    background-color: rgb(78, 150, 174);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    display: flex;
+    width: max-content;
+    font-weight: bold;
+    padding: 0.15vw 0.5vw;
+  }
+
+  .join {
+    appearance: none;
+    background: none;
+    border: none;
+    border: 1px solid $border-grey;
+    color: $border-grey;
+    border-radius: 3px;
+    width: max-content;
+    padding: 0.7vw 0.5vw;
+    cursor: pointer;
+  }
+
+  .leave {
+    appearance: none;
+    background: none;
+    border: none;
+    border: 1px solid $red-color;
+    color: $red-color;
+    border-radius: 3px;
+    width: max-content;
+    padding: 0.7vw 0.5vw;
+    cursor: pointer;
   }
 }
-
-.join-mission {
- padding: 0 3vw;
-}
-
-.member-mission {
-  padding: 0 0.5vw;
-}
-
-.mission-title {
-  vertical-align: top;
-  padding: 0.5vw;
-  font-weight: bold;
-}
-
-.mission-paragraph {
-  font-size: 0.6em;
-  line-height: 1.5em;
-  padding: 0.5vw 0.5vw 3vw;
-}
-
-.member {
-  appearance: none;
-  background: none;
-  border: none;
-  background-color: $grey-color;
-  color: white;
-  border-radius: 4px;
-  display: flex;
-  width: max-content;
-  font-weight: bold;
-  padding: 0.2vw 0.5vw;
-}
-
-.join {
-  appearance: none;
-  background: none;
-  border: none;
-  border: 1px solid $border-grey;
-  color: $border-grey;
-  border-radius: 3px;
-  width: max-content;
-  padding: 0.7vw 0.5vw;
-  cursor: pointer;
-}
-
-.leave {
-  appearance: none;
-  background: none;
-  border: none;
-  border: 1px solid $red-color;
-  color: $red-color;
-  border-radius: 3px;
-  width: max-content;
-  padding: 0.7vw 0.5vw;
-  cursor: pointer;
-}
-
-th {
-  padding: 10px;
-  border: 1px solid #333;
-}
-
