@@ -26,7 +26,6 @@ To get a local copy up and running follow this simple step:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aminat-buhari-2a39b2108/)
 
 👤 **Oshane Design**
-- Website - [OshaneDesign](https://oshanedesign.github.io/Portfolio/)
 - GitHub: [@githubhandle](https://github.com/oshanedesign) 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ocreary/)
 - Twitter: [@twitterhandle](https://twitter.com/oshanedesign)
