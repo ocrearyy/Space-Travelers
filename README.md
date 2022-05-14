@@ -5,7 +5,7 @@ The Space Travelers web application provides commercial and scientific space tra
 To get a local copy up and running follow this simple step:
 
 - Clone repository to your local machine: ``
-- Run `npm install` to install dependencies
+- Run `npm install` to install dependencies.
 
 ### Run web package
 
