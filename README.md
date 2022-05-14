@@ -28,9 +28,8 @@ To get a local copy up and running follow this simple step:
 👤 **Oshane Design**
 - Website - [OshaneDesign](https://oshanedesign.github.io/Portfolio/)
 - GitHub: [@githubhandle](https://github.com/oshanedesign) 
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/oshane-design-ab2631237)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ocreary/)
 - Twitter: [@twitterhandle](https://twitter.com/oshanedesign)
-- YouTube: [@youtube](https://www.youtube.com/channel/UCKEzfINidt1ob7xTOwIS_cA)
 
 ## 🤝 Contributing
 
