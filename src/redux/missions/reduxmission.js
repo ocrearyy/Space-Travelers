@@ -45,7 +45,7 @@ export const getMissions = () => async (dispatch) => {
 export function reserveMission(mission_id) {
   return {
     type: RESERVE,
-    mission_id,
+    mission_id, // eslint-disable-line no-use-before-define
   };
 }
 
@@ -53,6 +53,6 @@ export function reserveMission(mission_id) {
 export function cancelMission(mission_id) {
   return {
     type: CANCEL,
-    mission_id,
+    mission_id, // eslint-disable-line no-use-before-define
   };
 }
